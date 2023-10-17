@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="page1, page2, page3">
+    <meta name="Description" content="This is my website">
+    <title>My Website</title>
+    <link rel="website icon" href="images/website-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <nav>
+        <h1><a href="index.html">
+                <p class="website-title"> Shopping Paradise</p>
+            </a></h1>
+        <div><span style="font-size: 30px;">Welcome <span id="userName"> </span></span></div>
+        <div class="log-div">
+
+            <div id="logs" style="display: block;">
+                <span><a href="login.html">Login</a></span>
+                <span><a href="signup.html">Sign up</a></span>
+            </div>
+
+            <div id="userInfo" style="display: none; position: relative;">
+                <span id="openCart" style="cursor: pointer;"><i class="fas fa-shopping-cart"></i><span
+                        class="badge">0</span>Cart<i class="fas fa-caret-down"></i></span>
+                <div class="carts_products" id="cartProducts">
+                    <div class="products-in-cart">
+
+                    </div>
+                    <a href="cart.html">View All Products</a>
+                </div>
+                <span><a href="#" id="logout"> Logout</a></span>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="input-group p-4">
+
+        <button onclick="getSearchMode(this.id)" id="title" class="btn btn-light form-button" autofocus>Search br
+            name</button>
+        <button onclick="getSearchMode(this.id)" id="category" class="btn btn-light form-button">Search by
+            category</button>
+
+        <input placeholder="search by name (caseSensitive)" type="text" class="form-control" id="searchBar"
+            onkeyup="searchData(this.value)">
+    </div>
+
+    <hr>
+    <div class="container">
+        <div class="row productsDiv" id="productsDiv">
+
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
